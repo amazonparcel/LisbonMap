@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .location1, .bridge, .park, .moscavide, .sacavem, .airport, .lumiar, .chile, .alfornelos, .benfica, .alfragide, .monsanto { /*Add the location name here*/
+                width: 10px;
+                height: 10px;
+                border-radius: 75%;
+                position: absolute;
+                cursor: pointer;
+                background-color: orangered;
+            }
+            .tooltip {
+                position: absolute;
+                background-color: rgba(129, 129, 129, 0.8);
+                color: white;
+                padding: 10px; /*WRITE DEFINITION*/
+                border-radius: 10px;
+                font-size: 12px;
+                display: none;
+            }
+            .dot-link {
+                text-decoration: none;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map">
+            <img src="lisbonMap.jpg" width="532" height="450">
+            <div class="location1" style="top: 0px; left: 0px;">
+                <a href="google.com" class="dot=link">
+                    <div class="tooltip">
+        Name: XXXXXXXXXXXXXXXXXXXXX <br>
+        Address: XXXXXXXXXXXXXXXXXXXXX <br>
+        Contact: XXXXXXXXXXXXXXXXXXXXX <br>
+        Cultural Experiences: XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                </a>
+            </div>
+            <div class="bridge" style="top: 38px; left: 335px;">
+                <a href="google.com" class="dot=link">
+                    <div class="tooltip">
+        Name: Vasco da Gama bridge <br>
+        Address: Vasco da Gama bridge Lisbon 1990 <br>
+        Contact: 21 23 28200 <br>
+        Cultural Experiences: To move from one side to another.
+                    </div>
+                </a>
+            </div>
+            <div class="park" style="top: 180px; left: 514px;">
+                <a href="google.com" class="dot=link">
+                    <div class="tooltip">
+        Name: Parque Das Nacoes <br>
+        Address: Rossio dos olivais 1 parque das nacoes 1990-231 <br>
+        Contact: 21 138 8800 <br>
+        Cultural Experiences: Discovering marine wonders in Europe's largest aquarium!
+                    </div>
+                </a>
+            </div>
+            <div class="moscavide" style="top: 75px; left: 314px;">
+                <a href="google.com" class="dot=link">
+                    <div class="tooltip">
+        Name: Moscavide <br>
+        Address: Avenida Moscavide, Nr 49a Moscavidde, Poratugal 1885-066 <br>
+        Contact: 21 943 2172 <br>
+        Cultural Experiences: Cooking classes to learn and experience the culture.
+                    </div>
+                </a>
+            </div>
+            <div class="sacavem" style="top: 23px; left: 285px;">
+                <a href="google.com" class="dot=link">
+                    <div class="tooltip">
+        Name: Sacavem <br>
+        Address: R Salvador Allende 43 b sacavem 2685-114 <br>
+        Contact: 21 942 0718 <br>
+        Cultural Experiences: Discover Parque do Tejo.
+                    </div>
+                </a>
+            </div>
+            <div class="airport" style="top: 50px; left: 200px;">
+                <a href="google.com" class="dot=link">
+                    <div class="tooltip">
+        Name: XXXXXXXXXXXXXXXXXXXXX <br>
+        Address: XXXXXXXXXXXXXXXXXXXXX <br>
+        Contact: XXXXXXXXXXXXXXXXXXXXX <br>
+        Cultural Experiences: XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                </a>
+            </div>
+            <div class="lumiar" style="top: 110px; left: 180px;">
+                <a href="google.com" class="dot=link">
+                    <div class="tooltip">
+        Name: XXXXXXXXXXXXXXXXXXXXX <br>
+        Address: XXXXXXXXXXXXXXXXXXXXX <br>
+        Contact: XXXXXXXXXXXXXXXXXXXXX <br>
+        Cultural Experiences: XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                </a>
+            </div>
+            <div class="chile" style="top: 170px; left: 365px;">
+                <a href="google.com" class="dot=link">
+                    <div class="tooltip">
+        Name: XXXXXXXXXXXXXXXXXXXXX <br>
+        Address: XXXXXXXXXXXXXXXXXXXXX <br>
+        Contact: XXXXXXXXXXXXXXXXXXXXX <br>
+        Cultural Experiences: XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                </a>
+            </div>
+            <div class="alfornelos" style="top: 145px; left: 85px;">
+                <a href="google.com" class="dot=link">
+                    <div class="tooltip">
+        Name: XXXXXXXXXXXXXXXXXXXXX <br>
+        Address: XXXXXXXXXXXXXXXXXXXXX <br>
+        Contact: XXXXXXXXXXXXXXXXXXXXX <br>
+        Cultural Experiences: XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                </a>
+            </div>
+            <div class="benfica" style="top: 185px; left: 40px;">
+                <a href="google.com" class="dot=link">
+                    <div class="tooltip">
+        Name: XXXXXXXXXXXXXXXXXXXXX <br>
+        Address: XXXXXXXXXXXXXXXXXXXXX <br>
+        Contact: XXXXXXXXXXXXXXXXXXXXX <br>
+        Cultural Experiences: XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                </a>
+            </div>
+            <div class="alfragide" style="top: 245px; left: 35px;">
+                <a href="google.com" class="dot=link">
+                    <div class="tooltip">
+        Name: XXXXXXXXXXXXXXXXXXXXX <br>
+        Address: XXXXXXXXXXXXXXXXXXXXX <br>
+        Contact: XXXXXXXXXXXXXXXXXXXXX <br>
+        Cultural Experiences: XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                </a>
+            </div>
+            <div class="monsanto" style="top: 230px; left: 105px;">
+                <a href="google.com" class="dot=link">
+                    <div class="tooltip">
+        Name: XXXXXXXXXXXXXXXXXXXXX <br>
+        Address: XXXXXXXXXXXXXXXXXXXXX <br>
+        Contact: XXXXXXXXXXXXXXXXXXXXX <br>
+        Cultural Experiences: XXXXXXXXXXXXXXXXXXXXX
+                    </div>
+                </a>
+            </div>
+        </div>
+        <script>
+            const dots = document.querySelectorAll('.location1, .bridge, .park, .moscavide, .sacavem, .airport, .lumiar, .chile, .alfornelos, .benfica, .alfragide, .monsanto');
+            dots.forEach(dot => {
+                dot.addEventListener('mouseover', () => {
+                    dot.querySelector('.tooltip').style.display = 'block';
+                });
+                dot.addEventListener('mouseout', () => {
+                    dot.querySelector('.tooltip').style.display = 'none';
+                });
+            });
+        </script>
+    </body>
+</html>
